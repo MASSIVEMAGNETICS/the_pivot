@@ -1,0 +1,7 @@
+services:
+  forgeai:
+    build: .
+    ports: ["8501:8501", "8000:8000"]
+    volumes: ["./data:/app/data"]
+    environment:
+      - OLLAMA_HOST=http://host.docker.internal:11434
